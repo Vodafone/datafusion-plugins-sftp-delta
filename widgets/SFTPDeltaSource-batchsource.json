@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "spec-version": "1.5"
+  },
+  "display-name": "SFTPDelta",
+  "icon": {
+       "type": "inline",
+       "arguments": {
+           "data": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAzNCAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI0LjcwNTkgMjUuMjk1NkMyNC42ODQ0IDI1LjI1MzQgMjQuNzAxMiAyNS4yMDE3IDI0Ljc0MzQgMjUuMTgwMUwyNS44NDU2IDI0LjYxODRDMjUuODg3OCAyNC41OTY5IDI1LjkzOTYgMjQuNjEzNyAyNS45NjExIDI0LjY1NkwyNi4yNzg0IDI1LjI3ODlDMjYuMzcyOSAyNS40NjkyIDI2LjM4NzIgMjUuNjUwMiAyNi4zMjE1IDI1LjgyMTdDMjYuMjU1OCAyNS45OTMyIDI2LjEyMTQgMjYuMTMwOCAyNS45MTgyIDI2LjIzNDRDMjUuNzMyOSAyNi4zMjg4IDI1LjU2MiAyNi4zNDgxIDI1LjQwNTYgMjYuMjkyM0MyNS4yNTAyIDI2LjIzODQgMjUuMTIwNyAyNi4xMDk5IDI1LjAxNzEgMjUuOTA2NkwyNC43MDU5IDI1LjI5NTZaIiBmaWxsPSIjNDI4NUY0Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjguNzM4MiAzMEg1LjI1OTRDNC4zMjQzNSAzMCAzLjcxNjI1IDI5LjAxNTggNC4xMzQ0MyAyOC4xNzkzTDE1Ljg3MzggNC42OTU0NkMxNi4zMzc0IDMuNzY4MTggMTcuNjYwMyAzLjc2ODE4IDE4LjEyMzggNC42OTU0NkwyOS44NjMyIDI4LjE3OTNDMzAuMjgxMyAyOS4wMTU4IDI5LjY3MzIgMzAgMjguNzM4MiAzMFpNMjEuMzk0IDI3LjQ4MzlDMjEuNTIxNiAyNy40ODM5IDIxLjYwNDYgMjcuMzQ5NSAyMS41NDc2IDI3LjIzNTNMMTQuNjM2OCAxMy40MTA3QzE0LjU3MzUgMTMuMjg0MSAxNC4zOTI5IDEzLjI4NDEgMTQuMzI5NiAxMy40MTA3TDcuNDE4ODUgMjcuMjM1M0M3LjM2MTc2IDI3LjM0OTUgNy40NDQ3OSAyNy40ODM5IDcuNTcyNDUgMjcuNDgzOUgyMS4zOTRaTTE3LjM2MjQgMTIuNzg2N0MxNy4zMzI2IDEyLjkzOTkgMTcuMjQxIDEzLjA1NTcgMTcuMDg3NiAxMy4xMzM5QzE2Ljk1MjEgMTMuMjAyOSAxNi44MjA2IDEzLjIwNTkgMTYuNjkzMSAxMy4xNDI4QzE2LjU2ODYgMTMuMDgwOCAxNi40NjIyIDEyLjk2MzEgMTYuMzczOSAxMi43ODk3QzE2LjIzNTkgMTIuNTE4NyAxNi4xOTA3IDEyLjI5NDUgMTYuMjM4MyAxMi4xMTdDMTYuMjgzMyAxMS45NjA1IDE2LjQgMTEuODI2NiAxNi41ODg2IDExLjcxNTVDMTYuNjI5NSAxMS42OTE0IDE2LjY0NjUgMTEuNjM5OSAxNi42MjUgMTEuNTk3N0wxNi4xNjY5IDEwLjY5ODVDMTYuMTQ1NCAxMC42NTYzIDE2LjA5MzYgMTAuNjM5MyAxNi4wNTI0IDEwLjY2MjdDMTUuODAyNiAxMC44MDQ4IDE1LjYxMDMgMTAuOTkyNCAxNS40NzU1IDExLjIyNTZDMTUuMzMwNSAxMS40ODI4IDE1LjI2NjggMTEuNzg2MyAxNS4yODQ0IDEyLjEzNjNDMTUuMzA1MSAxMi40ODcyIDE1LjQwNTMgMTIuODM5MSAxNS41ODQ5IDEzLjE5MThDMTUuODM5OCAxMy42OTIgMTYuMTQ4OCAxNC4wMzAyIDE2LjUxMjIgMTQuMjA2NUMxNi44NzU1IDE0LjM4MjggMTcuMjQ3NSAxNC4zNzM5IDE3LjYyOCAxNC4xOEMxOC4xMDQyIDEzLjkzNzMgMTguMzU4IDEzLjUxMTggMTguMzg5MyAxMi45MDM0QzE4LjQwMjQgMTIuNjUzMyAxOC4zODAyIDEyLjM1MzMgMTguMzIyNSAxMi4wMDM3QzE4LjI2NjkgMTEuNjUzIDE4LjI1MzQgMTEuMzk1MSAxOC4yODIxIDExLjIyOThDMTguMzEyOSAxMS4wNjM1IDE4LjM4NCAxMC45NTIgMTguNDk1NiAxMC44OTUxQzE4LjYyMzEgMTAuODMwMSAxOC43NTUxIDEwLjgzMDYgMTguODkxNiAxMC44OTY2QzE5LjAzMTEgMTAuOTYzNiAxOS4xNDg2IDExLjA5MDcgMTkuMjQ0IDExLjI3OEMxOS4zMzg0IDExLjQ2MzQgMTkuMzY0MiAxMS42MzQ3IDE5LjMyMTQgMTEuNzkyMUMxOS4yODU5IDExLjkyNzcgMTkuMjAxMiAxMi4wMzg0IDE5LjA2NzMgMTIuMTI0MUMxOS4wMjc0IDEyLjE0OTYgMTkuMDEwMiAxMi4yMDA5IDE5LjAzMTggMTIuMjQzMkwxOS40ODY4IDEzLjEzNjNDMTkuNTA4MyAxMy4xNzg2IDE5LjU2MDEgMTMuMTk1NiAxOS42MDEyIDEzLjE3MTlDMTkuODI5IDEzLjA0MDYgMjAuMDAzOSAxMi44NjU3IDIwLjEyNiAxMi42NDcyQzIwLjI2MzEgMTIuNDA0MSAyMC4zMjQgMTIuMTI5NSAyMC4zMDg3IDExLjgyMzZDMjAuMjk0NCAxMS41MTk2IDIwLjIwNzYgMTEuMjExMiAyMC4wNDgyIDEwLjg5ODNDMTkuODg0NyAxMC41Nzc1IDE5LjY4NTcgMTAuMzE0OSAxOS40NTEyIDEwLjExMDdDMTkuMjE4NiA5LjkwNTM3IDE4Ljk3MzcgOS43NzkyIDE4LjcxNjMgOS43MzIxNEMxOC40NjE5IDkuNjg2MDYgMTguMjE0MiA5LjcyNDQ1IDE3Ljk3MzEgOS44NDczMUMxNy40ODkgMTAuMDk0MSAxNy4yNTIxIDEwLjU3IDE3LjI2MjUgMTEuMjc1MUMxNy4yNjUxIDExLjQ5MjEgMTcuMjkwMSAxMS43NjA1IDE3LjMzNzYgMTIuMDgwMkMxNy4zODUgMTIuMzk5OSAxNy4zOTMzIDEyLjYzNTQgMTcuMzYyNCAxMi43ODY3Wk0yMC4yOTgxIDE4LjAxQzIwLjMxOTYgMTguMDUyMyAyMC4zNzEzIDE4LjA2OTEgMjAuNDEzNiAxOC4wNDc1TDIxLjA2NzQgMTcuNzE0M0MyMS4xMDk3IDE3LjY5MjcgMjEuMTI2NSAxNy42NDEgMjEuMTA1IDE3LjU5ODhMMjAuMzIxMSAxNi4wNTk5QzIwLjI5OTUgMTYuMDE3NyAyMC4zMTYzIDE1Ljk2NiAyMC4zNTg2IDE1Ljk0NDRMMjEuMjA2NyAxNS41MTIyQzIxLjI0OSAxNS40OTA2IDIxLjMwMDcgMTUuNTA3NCAyMS4zMjIyIDE1LjU0OTdMMjIuMTkyOSAxNy4yNTg5QzIyLjIxNDUgMTcuMzAxMiAyMi4yNjYyIDE3LjMxOCAyMi4zMDg0IDE3LjI5NjVMMjIuOTY1MyAxNi45NjE3QzIzLjAwNzUgMTYuOTQwMiAyMy4wMjQzIDE2Ljg4ODQgMjMuMDAyOCAxNi44NDYyTDIxLjU5NzYgMTQuMDg3OEMyMS41NzYxIDE0LjA0NTUgMjEuNTI0NCAxNC4wMjg3IDIxLjQ4MjEgMTQuMDUwMkwxNy4yODM5IDE2LjE4OThDMTcuMjQxNiAxNi4yMTE0IDE3LjIyNDggMTYuMjYzMSAxNy4yNDYzIDE2LjMwNTNMMTcuNzAyOCAxNy4yMDE1QzE3LjcyNDQgMTcuMjQzOCAxNy43NzYxIDE3LjI2MDYgMTcuODE4MyAxNy4yMzlMMTkuMzk4NyAxNi40MzM2QzE5LjQ0MDkgMTYuNDEyMSAxOS40OTI2IDE2LjQyODkgMTkuNTE0MiAxNi40NzEyTDIwLjI5ODEgMTguMDFaTTI0Ljc2OTUgMjIuMTI3NkMyNC43MjcyIDIyLjE0OTEgMjQuNjc1NSAyMi4xMzIzIDI0LjY1NCAyMi4wOUwyNC4wNjY1IDIwLjkzNjhDMjQuMDQ1IDIwLjg5NDYgMjMuOTkzMyAyMC44Nzc3IDIzLjk1MSAyMC44OTkzTDIwLjU2MjYgMjIuNjI2MUMyMC41MjA0IDIyLjY0NzcgMjAuNDY4NiAyMi42MzA5IDIwLjQ0NzEgMjIuNTg4NkwxOS45OTA2IDIxLjY5MjRDMTkuOTY5MSAyMS42NTAyIDE5Ljk4NTkgMjEuNTk4NSAyMC4wMjgxIDIxLjU3NjlMMjMuNDE2NSAxOS44NTAxQzIzLjQ1ODggMTkuODI4NSAyMy40NzU2IDE5Ljc3NjggMjMuNDU0MSAxOS43MzQ2TDIyLjg3ODggMTguNjA1MkMyMi44NTcyIDE4LjU2MyAyMi44NzQgMTguNTExMyAyMi45MTYzIDE4LjQ4OTdMMjMuNTczMiAxOC4xNTVDMjMuNjE1NCAxOC4xMzM0IDIzLjY2NzEgMTguMTUwMiAyMy42ODg3IDE4LjE5MjVMMjUuNDYzOSAyMS42NzczQzI1LjQ4NTQgMjEuNzE5NiAyNS40Njg2IDIxLjc3MTMgMjUuNDI2MyAyMS43OTI4TDI0Ljc2OTUgMjIuMTI3NlpNMjMuNzgwNSAyNS42NzA5QzIzLjgyMjggMjUuNjQ5MyAyMy44NzQ1IDI1LjY2NjEgMjMuODk2IDI1LjcwODRMMjQuMTk4MSAyNi4zMDE0QzI0LjQ2ODEgMjYuODMxNSAyNC44MDY4IDI3LjE4MzUgMjUuMjE0MiAyNy4zNTc1QzI1LjYyNDUgMjcuNTMyNCAyNi4wNDE5IDI3LjUxMTggMjYuNDY2MiAyNy4yOTU1QzI2Ljc1MzEgMjcuMTQ5MyAyNi45NzMxIDI2Ljk0OCAyNy4xMjYyIDI2LjY5MThDMjcuMjgyMiAyNi40MzY2IDI3LjM1NTYgMjYuMTQ5NCAyNy4zNDYxIDI1LjgzMDRDMjcuMzM5NyAyNS41MTI0IDI3LjI1MTggMjUuMTg3IDI3LjA4MjIgMjQuODU0MkwyNi4yMzY1IDIzLjE5NEMyNi4yMTUgMjMuMTUxNyAyNi4xNjMzIDIzLjEzNDkgMjYuMTIxIDIzLjE1NjVMMjEuOTIyNyAyNS4yOTYxQzIxLjg4MDUgMjUuMzE3NiAyMS44NjM3IDI1LjM2OTMgMjEuODg1MiAyNS40MTE2TDIyLjM0MTcgMjYuMzA3N0MyMi4zNjMyIDI2LjM1IDIyLjQxNDkgMjYuMzY2OCAyMi40NTcyIDI2LjM0NTNMMjMuNzgwNSAyNS42NzA5WiIgZmlsbD0iIzQyODVGNCIvPgo8L3N2Zz4K"
+       }
+  },
+  "configuration-groups": [
+    {
+      "label": "Reference",
+      "properties": [
+        {
+          "label": "Reference Name",
+          "widget-type": "textbox",
+          "name": "referenceName",
+          "widget-attributes": {
+            "placeholder": "Name used to identify this source for lineage",
+            "default": ""
+          }
+        }
+      ]
+    },
+    {
+      "label": "SFTP Server",
+      "properties": [
+        {
+          "label": "Host",
+          "name": "sftpServer",
+          "widget-type": "textbox",
+          "widget-attributes": {
+            "default": ""
+          }
+        },
+        {
+          "label": "Port",
+          "name": "sftpPort",
+          "widget-type": "textbox",
+          "widget-attributes": {
+            "default": "22"
+          }
+        },
+        {
+          "label": "Path ",
+          "name": "sftpPath",
+          "widget-type": "textbox",
+          "widget-attributes": {
+            "default": ""
+          }
+        },
+        {
+          "label": "Regex Path Filter ",
+          "name": "regexFilter",
+          "widget-type": "textbox",
+          "widget-attributes": {
+            "default": "",
+            "placeholder": "Regex Path Filter. For Example: .*.parquet 'https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#sum'"
+          }
+        },
+        {
+          "label": "Username",
+          "name": "sftpUser",
+          "widget-type": "textbox",
+          "widget-attributes": {
+            "default": ""
+          }
+        },
+        {
+          "name": "authentication",
+          "widget-type": "radio-group",
+          "widget-attributes": {
+            "layout": "inline",
+            "default": "privatekey-select",
+            "options": [
+              {
+                "id": "privatekey-select",
+                "label": "PrivateKey"
+              },
+              {
+                "id": "password-select",
+                "label": "Password"
+              }
+            ]
+          }
+        },
+        {
+          "widget-type": "password",
+          "label": "Password",
+          "name": "sftpPass"
+        },
+        {
+          "widget-type": "textarea",
+          "label": "PrivateKey",
+          "name": "PrivateKey"
+        },
+        {
+          "widget-type": "password",
+          "label": "PrivateKey Passphrase",
+          "name": "PrivateKeyPass"
+        }
+      ]
+    },
+    {
+      "label": "Delta",
+      "properties": [
+        {
+          "widget-type": "textbox",
+          "label": "Last date processed File",
+          "name": "persistDelta",
+          "widget-attributes": {
+            "default": "",
+            "placeholder": "The last modification time file to persist"
+          }
+        },
+        {
+          "widget-type": "textbox",
+          "label": "Last date processed",
+          "name": "fromDelta",
+          "widget-attributes": {
+            "placeholder": "The last modification time. They are represented as seconds from Jan 1, 1970 in UTC"
+          }
+        }
+      ]
+    },
+    {
+      "label" : "GCS Delta properties",
+      "properties" : [
+        {
+          "name": "serviceAccountType",
+          "label": "Service Account Type",
+          "widget-type": "radio-group",
+          "widget-attributes": {
+            "layout": "inline",
+            "default": "filePath",
+            "options": [
+              {
+                "id": "filePath",
+                "label": "File Path"
+              },
+              {
+                "id": "json",
+                "label": "JSON"
+              }
+            ]
+          }
+        },
+        {
+          "widget-type": "textbox",
+          "label": "GCP Service Account JSON",
+          "name": "serviceAccountJSON"
+        },
+        {
+          "widget-type": "textbox",
+          "label": " GCP Service Account File Path",
+          "name": "serviceFilePath",
+          "widget-attributes": {
+            "default": "auto-detect"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Advanced",
+      "properties": [
+        {
+          "widget-type": "keyvalue",
+          "label": "Properties for SSH",
+          "name": "sshProperties",
+          "widget-attributes": {
+            "showDelimiter": "false",
+            "key-placeholder": "key",
+            "value-placeholder": "value"
+          }
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "widget-type": "non-editable-schema-editor",
+      "schema": {
+        "name": "etlSchemaBody",
+        "type": "record",
+        "fields": [
+          {
+            "name": "connection",
+            "type": "string"
+          },
+          {
+            "name": "fullfilename",
+            "type": "string"
+          },
+          {
+            "name": "filename",
+            "type": "string"
+          },
+          {
+            "name": "basename",
+            "type": "string"
+          },
+          {
+            "name": "size",
+            "type": "long"
+          },
+          {
+            "name": "mtime",
+            "type": "int"
+          }
+        ]
+      }
+    }
+  ],
+  "filters": [
+    {
+      "name": "AuthByPrivateKey",
+      "condition": {
+        "expression": "authentication == 'privatekey-select'"
+      },
+      "show":[
+        {
+          "type": "property",
+          "name": "PrivateKey"
+        },
+        {
+          "type": "property",
+          "name": "PrivateKeyPass"
+        }
+      ]
+    },
+    {
+      "name": "AuthByPassword",
+      "condition": {
+        "expression": "authentication == 'password-select'"
+      },
+      "show":
+      [
+        {
+          "type": "property",
+          "name": "sftpPass"
+        }
+      ]
+    },
+    {
+      "name": "ServiceAuthenticationTypeFilePath",
+      "condition": {
+        "expression": "serviceAccountType == 'filePath'"
+      },
+      "show":[
+        {
+          "type": "property",
+          "name": "serviceFilePath"
+        }
+      ]
+    },
+    {
+      "name": "ServiceAuthenticationTypeJSON",
+      "condition": {
+        "expression": "serviceAccountType == 'json'"
+      },
+      "show":[
+        {
+          "type": "property",
+          "name": "serviceAccountJSON"
+        }
+      ]
+    }
+  ],
+
+  "jump-config": {
+    "datasets": [
+      {
+        "ref-property-name": "referenceName"
+      }
+    ]
+  }
+
+}

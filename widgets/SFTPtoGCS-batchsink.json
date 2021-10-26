@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "spec-version": "1.5"
+  },
+  "display-name": "SFTPtoGS",
+  "icon": {
+    "type": "inline",
+    "arguments": {
+      "data": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAzNCAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjMwNjYgNy45MzE0NUwyMS42Nzg5IDE4LjY3NzRIMjMuMDY1N0wxNyA2LjU0NDQ5TDE2LjMwNjYgNy45MzE0NVoiIGZpbGw9IiM0Mjg1RjQiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik05LjY2MjE5IDIwLjI1SDI0LjMzNzhDMjQuOTIyMiAyMC4yNSAyNS4zMDIzIDE5LjYzNDkgMjUuMDQxIDE5LjExMjFMMTcuNzAzMiA0LjQzNDY2QzE3LjQxMzUgMy44NTUxMSAxNi41ODY2IDMuODU1MTEgMTYuMjk2OCA0LjQzNDY2TDguOTU5MDIgMTkuMTEyMUM4LjY5NzY0IDE5LjYzNDkgOS4wNzc3NCAyMC4yNSA5LjY2MjE5IDIwLjI1Wk0xOS44NDMyIDE4LjUyMjFDMTkuODc4OSAxOC41OTM0IDE5LjgyNyAxOC42Nzc0IDE5Ljc0NzIgMTguNjc3NEgxMS4xMDhDMTEuMDI4MiAxOC42Nzc0IDEwLjk3NjMgMTguNTkzNCAxMS4wMTIgMTguNTIyMUwxNS4zMzE2IDkuODgxNjlDMTUuMzcxMiA5LjgwMjU3IDE1LjQ4NDEgOS44MDI1NyAxNS41MjM2IDkuODgxNjlMMTkuODQzMiAxOC41MjIxWiIgZmlsbD0iIzQyODVGNCIvPgo8cGF0aCBkPSJNMjguNzgxMiAyMS44NzVDMjguMTA4MiAyMS44NzUgMjcuNTYyNSAyMi40MjA3IDI3LjU2MjUgMjMuMDkzOFYyNS45Mzc1QzI3LjU2MjUgMjYuODM1IDI2LjgzNSAyNy41NjI1IDI1LjkzNzUgMjcuNTYyNUg4LjA2MjVDNy4xNjUwNCAyNy41NjI1IDYuNDM3NSAyNi44MzUgNi40Mzc1IDI1LjkzNzVWMjMuMDkzOEM2LjQzNzUgMjIuNDIwNyA1Ljg5MTg1IDIxLjg3NSA1LjIxODc1IDIxLjg3NUM0LjU0NTY1IDIxLjg3NSA0IDIyLjQyMDcgNCAyMy4wOTM4VjI2Ljc1QzQgMjguNTM3NSA1LjQ2MjUgMzAgNy4yNSAzMEgyNi43NUMyOC41Mzc1IDMwIDMwIDI4LjUzNzUgMzAgMjYuNzVWMjMuMDkzOEMzMCAyMi40MjA3IDI5LjQ1NDMgMjEuODc1IDI4Ljc4MTIgMjEuODc1WiIgZmlsbD0iIzQyODVGNCIvPgo8cGF0aCBkPSJNMTAuOTkwOSAyNS43MzU1QzEwLjk5MDkgMjUuNjQ1OCAxMC45NDAyIDI1LjU3MzggMTAuODM4OCAyNS41MTk1QzEwLjczNzQgMjUuNDY1MiAxMC41NDQ4IDI1LjQwODkgMTAuMjYwOCAyNS4zNTA0QzkuOTc2OSAyNS4yOTIgOS43NDI1NSAyNS4yMTU4IDkuNTU3NzcgMjUuMTIxOUM5LjM3MyAyNS4wMjU5IDkuMjMyMTYgMjQuOTEgOS4xMzUyNyAyNC43NzQzQzkuMDM4MzcgMjQuNjM4NiA4Ljk4OTkyIDI0LjQ4MzEgOC45ODk5MiAyNC4zMDc4QzguOTg5OTIgMjMuOTk2OCA5LjEyODUgMjMuNzQxMSA5LjQwNTY3IDIzLjU0MDdDOS42ODI4NCAyMy4zMzgyIDEwLjA0NTYgMjMuMjM3IDEwLjQ5NDEgMjMuMjM3QzEwLjk3NjMgMjMuMjM3IDExLjM2MzkgMjMuMzM4MiAxMS42NTY4IDIzLjU0MDdDMTEuODQ4NSAyMy42NzMyIDExLjk3NzUgMjMuODMzIDEyLjA0MzcgMjQuMDJDMTIuMTAzNyAyNC4xODkyIDExLjk1MDcgMjQuMzM5MSAxMS43NzEyIDI0LjMzOTFIMTEuMjc4N0MxMS4wOTkyIDI0LjMzOTEgMTAuOTc2OSAyNC4xNjU1IDEwLjg0NjggMjQuMDQxOUMxMC43Njk3IDIzLjk2ODcgMTAuNjUxIDIzLjkzMjEgMTAuNDkwNyAyMy45MzIxQzEwLjM3MTIgMjMuOTMyMSAxMC4yNzEgMjMuOTYzNCAxMC4xODk4IDI0LjAyNkMxMC4xMDg3IDI0LjA4NjUgMTAuMDY4MiAyNC4xNjI3IDEwLjA2ODIgMjQuMjU0NkMxMC4wNjgyIDI0LjM0ODUgMTAuMTE3NyAyNC40MjQ3IDEwLjIxNjkgMjQuNDgzMUMxMC4zMTYgMjQuNTQxNiAxMC40NzM4IDI0LjU4OTYgMTAuNjkwMSAyNC42MjcyQzEwLjkwODcgMjQuNjY0NyAxMS4xMDAyIDI0LjcwOTYgMTEuMjY0NyAyNC43NjE4QzExLjgxNDUgMjQuOTM3MSAxMi4wODk0IDI1LjI1MTMgMTIuMDg5NCAyNS43MDQyQzEyLjA4OTQgMjYuMDEzMiAxMS45NDA3IDI2LjI2NDcgMTEuNjQzMyAyNi40NTg4QzExLjM0ODEgMjYuNjUyOSAxMC45NjUgMjYuNzUgMTAuNDk0MSAyNi43NUMxMC4xODA4IDI2Ljc1IDkuOTAxNDEgMjYuNjk3OCA5LjY1NTggMjYuNTkzNEM5LjQxMDE4IDI2LjQ4OTEgOS4yMTg2NCAyNi4zNDcxIDkuMDgxMTggMjYuMTY3NkM5LjAxODk0IDI2LjA4NjMgOC45NzA3OCAyNi4wMDMxIDguOTM2NzIgMjUuOTE4QzguODcwMDYgMjUuNzUxMyA5LjAyMDUxIDI1LjYwMDkgOS4yIDI1LjYwMDlIOS42MjM5NEM5Ljc5OTc5IDI1LjYwMDkgOS45MjQ5IDI1Ljc2MjcgMTAuMDQ1IDI1Ljg5MTJDMTAuMDYzNyAyNS45MTEyIDEwLjA4NSAyNS45MjkzIDEwLjEwODcgMjUuOTQ1M0MxMC4yMTY5IDI2LjAxNjMgMTAuMzU1NSAyNi4wNTE4IDEwLjUyNDUgMjYuMDUxOEMxMC42OCAyNi4wNTE4IDEwLjc5NiAyNi4wMjI2IDEwLjg3MjYgMjUuOTY0MUMxMC45NTE1IDI1LjkwNTcgMTAuOTkwOSAyNS44Mjk1IDEwLjk5MDkgMjUuNzM1NVoiIGZpbGw9IiM0Mjg1RjQiLz4KPHBhdGggZD0iTTE0Ljg2NTIgMjYuMzYyNEMxNC44NjUyIDI2LjU0MTkgMTQuNzE5NiAyNi42ODc0IDE0LjU0MDIgMjYuNjg3NEgxNC4wNDc3QzEzLjg2ODIgMjYuNjg3NCAxMy43MjI3IDI2LjU0MTkgMTMuNzIyNyAyNi4zNjI0VjIzLjYyNDZDMTMuNzIyNyAyMy40NDUxIDEzLjg2ODIgMjMuMjk5NiAxNC4wNDc3IDIzLjI5OTZIMTQuNTQwMUMxNC43MTk2IDIzLjI5OTYgMTQuODY1MiAyMy40NDUxIDE0Ljg2NTIgMjMuNjI0NlYyNi4zNjI0WiIgZmlsbD0iIzQyODVGNCIvPgo8cGF0aCBkPSJNMTcuNDE0NyAyMy4yOTk2QzE3LjU1MDUgMjMuMjk5NiAxNy42NjQgMjMuNDAzIDE3LjY3NjcgMjMuNTM4M0MxNy42ODIyIDIzLjU5NjcgMTcuNzU3NiAyMy42MjA4IDE3LjgwMDIgMjMuNTgwM0MxOC4wNDA3IDIzLjM1MTQgMTguMzUyNiAyMy4yMzcgMTguNzM2IDIzLjIzN0MxOS4xMTY4IDIzLjIzNyAxOS40MDA3IDIzLjM0MjQgMTkuNTg3OCAyMy41NTMyQzE5Ljc3NzEgMjMuNzY0IDE5Ljg3NTEgMjQuMDgxMyAxOS44ODE4IDI0LjUwNTFWMjYuMzYyNEMxOS44ODE4IDI2LjU0MTkgMTkuNzM2MyAyNi42ODc0IDE5LjU1NjggMjYuNjg3NEgxOS4wNjQ0QzE4Ljg4NDkgMjYuNjg3NCAxOC43Mzk0IDI2LjU0MTkgMTguNzM5NCAyNi4zNjI0VjI0LjU0ODlDMTguNzM5NCAyNC4zNzc3IDE4LjcwMjIgMjQuMjUyNSAxOC42Mjc4IDI0LjE3MzJDMTguNTUzNSAyNC4wOTE4IDE4LjQxODMgMjQuMDUxMSAxOC4yMjIyIDI0LjA1MTFDMTguMDM3NSAyNC4wNTExIDE3Ljg5MjIgMjQuMTA2OSAxNy43ODYzIDI0LjIxODVDMTcuNzQyMiAyNC4yNjQ5IDE3LjcyNTQgMjQuMzI5NCAxNy43MjU0IDI0LjM5MzRWMjYuMzYyNEMxNy43MjU0IDI2LjU0MTkgMTcuNTc5OSAyNi42ODc0IDE3LjQwMDQgMjYuNjg3NEgxNi45MTEzQzE2LjczMTggMjYuNjg3NCAxNi41ODYzIDI2LjU0MTkgMTYuNTg2MyAyNi4zNjI0VjIzLjYyNDZDMTYuNTg2MyAyMy40NDUxIDE2LjczMTggMjMuMjk5NiAxNi45MTEzIDIzLjI5OTZIMTcuNDE0N1oiIGZpbGw9IiM0Mjg1RjQiLz4KPHBhdGggZD0iTTIzLjA3NDggMjUuNTA4MkMyMy4wNDc3IDI1LjQ2NTIgMjIuOTg4MiAyNS40NTc0IDIyLjk1MDkgMjUuNDkyTDIyLjcyNzUgMjUuNjk4OUMyMi43MTA5IDI1LjcxNDMgMjIuNzAxNSAyNS43MzU5IDIyLjcwMTUgMjUuNzU4NVYyNi4zNjI0QzIyLjcwMTUgMjYuNTQxOSAyMi41NTYgMjYuNjg3NCAyMi4zNzY1IDI2LjY4NzRIMjEuODg3NEMyMS43MDc5IDI2LjY4NzQgMjEuNTYyNCAyNi41NDE5IDIxLjU2MjQgMjYuMzYyNFYyMi4yQzIxLjU2MjQgMjIuMDIwNSAyMS43MDc5IDIxLjg3NSAyMS44ODc0IDIxLjg3NUgyMi4zNzY1QzIyLjU1NiAyMS44NzUgMjIuNzAxNSAyMi4wMjA1IDIyLjcwMTUgMjIuMlYyNC4yNDgxQzIyLjcwMTUgMjQuMzA5IDIyLjc3NzkgMjQuMzM2MiAyMi44MTY0IDI0LjI4OUwyMy41Nzc4IDIzLjQxMTZDMjMuNjM5NSAyMy4zNDA1IDIzLjcyOSAyMy4yOTk2IDIzLjgyMzIgMjMuMjk5NkgyNC4zMDAyQzI0LjU4MzIgMjMuMjk5NiAyNC43MzEgMjMuNjM2MiAyNC41Mzk0IDIzLjg0NDZMMjMuODAzMiAyNC42NDUzQzIzLjc3NzYgMjQuNjczMiAyMy43NzQ2IDI0LjcxNSAyMy43OTYgMjQuNzQ2MkwyNC43NzY4IDI2LjE3ODhDMjQuOTI0NCAyNi4zOTQ1IDI0Ljc3IDI2LjY4NzQgMjQuNTA4NiAyNi42ODc0SDIzLjk5OTNDMjMuODg3OSAyNi42ODc0IDIzLjc4NDIgMjYuNjMwMyAyMy43MjQ2IDI2LjUzNkwyMy4wNzQ4IDI1LjUwODJaIiBmaWxsPSIjNDI4NUY0Ii8+Cjwvc3ZnPgo="
+    }
+  },
+  "configuration-groups": [
+    {
+      "label": "Reference",
+      "properties": [
+        {
+          "label": "Reference Name",
+          "widget-type": "textbox",
+          "name": "referenceName",
+          "widget-attributes": {
+            "placeholder": "Name used to identify this source for lineage"
+          }
+        }
+        ]
+    },
+    {
+      "label": "SFTP to GCS sink",
+      "properties": [
+        {
+          "label": "Path ",
+          "widget-type": "textbox",
+          "name": "path",
+          "widget-attributes": {
+            "default": "",
+            "placeholder": "gs://<bucket>/path/to/output"
+          }
+        }
+      ]
+     },
+    {
+      "label": "Retry policy",
+      "properties": [
+        {
+          "label": "Num. retries",
+          "widget-type": "textbox",
+          "name": "numRetries",
+          "widget-attributes": {
+            "default": "3"
+          }
+        },
+        {
+          "label": "Time to wait",
+          "widget-type": "textbox",
+          "name": "timeToWait",
+          "widget-attributes": {
+            "default": "30"
+          }
+        }
+      ]
+    },
+    {
+      "label" : "Archive/Remove SFTP files",
+      "properties" : [
+        {
+          "name": "archiveOriginals",
+          "label": "Archive/Remove Original Files",
+          "widget-type": "toggle",
+          "widget-attributes": {
+            "on": {
+              "value": "yes",
+              "label": "Yes"
+            },
+            "off": {
+              "value": "no",
+              "label": "No"
+            },
+            "default": "no"
+          }
+        },
+        {
+          "widget-type": "radio-group",
+          "label": "Archive/Remove",
+          "name": "archiveOption",
+          "widget-attributes": {
+            "placeholder": "Archive/Remove SFTP source files",
+            "layout": "inline",
+            "default": "rename",
+            "options": [
+              {
+                "id": "rename",
+                "label": "Archive"
+              },
+              {
+                "id": "rm",
+                "label": "Remove"
+              }
+            ]
+          }
+        },
+        {
+          "widget-type": "textbox",
+          "label": "SFTP Target Path",
+          "name": "targetPath",
+          "widget-attributes": {
+            "placeholder": "files will be moved to this path after a successful upload"
+          }
+        }
+      ]
+    },
+    {
+      "label" : "Credentials",
+      "properties" : [
+        {
+          "name": "serviceAccountType",
+          "label": "Service Account Type",
+          "widget-type": "radio-group",
+          "widget-attributes": {
+            "layout": "inline",
+            "default": "filePath",
+            "options": [
+              {
+                "id": "filePath",
+                "label": "File Path"
+              },
+              {
+                "id": "json",
+                "label": "JSON"
+              }
+            ]
+          }
+        },
+        {
+          "widget-type": "textbox",
+          "label": "Service Account JSON",
+          "name": "serviceAccountJSON"
+        },
+        {
+          "widget-type": "textbox",
+          "label": "Service Account File Path",
+          "name": "serviceFilePath",
+          "widget-attributes": {
+            "default": "auto-detect"
+          }
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+    "name": "ServiceAuthenticationTypeFilePath",
+    "condition": {
+      "expression": "serviceAccountType == 'filePath'"
+    },
+    "show":[
+      {
+        "type": "property",
+        "name": "serviceFilePath"
+      }
+    ]
+    },
+    {
+      "name": "ServiceAuthenticationTypeJSON",
+      "condition": {
+        "expression": "serviceAccountType == 'json'"
+      },
+      "show":[
+        {
+          "type": "property",
+          "name": "serviceAccountJSON"
+        }
+      ]
+    },
+    {
+      "name": "CopyOriginalsSwitch",
+      "condition": {
+        "expression": "archiveOriginals == 'yes'"
+      },
+      "show":[
+        {
+          "type": "property",
+          "name": "archiveOption"
+        },
+        {
+          "type": "property",
+          "name": "targetPath"
+        }
+      ]
+    },
+    {
+      "name": "ShowArchiveOriginalsBox",
+      "condition": {
+        "expression": "archiveOption == 'rename'"
+      },
+      "show":[
+        {
+          "type": "property",
+          "name": "targetPath"
+        }
+      ]
+    }
+  ],
+  "outputs": [],
+  "jump-config": {
+    "datasets": [
+      {
+        "ref-property-name": "referenceName"
+      }
+    ]
+  }
+}
