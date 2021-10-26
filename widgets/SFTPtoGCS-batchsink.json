@@ -91,7 +91,7 @@
                 "label": "Archive"
               },
               {
-                "id": "rm",
+                "id": "remove",
                 "label": "Remove"
               }
             ]
@@ -104,6 +104,28 @@
           "widget-attributes": {
             "placeholder": "files will be moved to this path after a successful upload"
           }
+        }
+      ]
+    },
+    {
+      "label": "Encryption",
+      "properties": [
+        {
+          "widget-type": "select",
+          "label": "Encryption Algorithm",
+          "name": "encryption",
+          "widget-attributes": {
+            "values": [
+              "PGP",
+              "NONE"
+            ],
+            "default": "NONE"
+          }
+        },
+        {
+          "widget-type": "textbox",
+          "label": "Public Key Path",
+          "name": "publicKeyPath"
         }
       ]
     },

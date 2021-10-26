@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "spec-version": "1.5"
+  },
+  "display-name": "GSDelta",
+  "icon": {
+    "type": "inline",
+    "arguments": {
+      "data": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xLjI1OTc3IDBIMjQuNzM4M0MyNS42NzMzIDAgMjYuMjgxMyAwLjk4NDIyMiAyNS44NjMzIDEuODIwNjhMMTQuMTI0IDI1LjMwNDVDMTMuNjYwMiAyNi4yMzE4IDEyLjMzNzQgMjYuMjMxOCAxMS44NzQgMjUuMzA0NUwwLjEzNDI4MSAxLjgyMDY4Qy0wLjI4MzY4NyAwLjk4NDIyMiAwLjMyNDcxMSAwIDEuMjU5NzcgMFpNOC42MDM1MiAyLjUxNjE0QzguNDc2MDggMi41MTYxNCA4LjM5MzA3IDIuNjUwNTEgOC40NTAyIDIuNzY0NzFMMTUuMzYwOCAxNi41ODkzQzE1LjQyNDMgMTYuNzE1OSAxNS42MDUgMTYuNzE1OSAxNS42NjggMTYuNTg5M0wyMi41NzkxIDIuNzY0NzFDMjIuNjM1NyAyLjY1MDUxIDIyLjU1MjcgMi41MTYxNCAyMi40MjUzIDIuNTE2MTRIOC42MDM1MlpNNS42Mjc0NSA4Ljg3NTA2QzUuMzY2NyA4LjgwMzAxIDUuMTAzNTIgOC42Mzg0NiA0LjgzNzQxIDguMzgxNDRDNC41NzE3OCA4LjEyNDM5IDQuMzQ1NzEgNy44MDk5MSA0LjE2MDE2IDcuNDM3OTNDMy44NzQwMyA2Ljg2NTk3IDMuODIwOCA2LjMyMTU2IDQgNS44MDQ3MkM0LjE3OTIgNS4yODc5IDQuNTc0NzEgNC44NjE2IDUuMTg2NTMgNC41MjU4OEw1LjU2Mjk5IDQuMzM0MDVDNS45OTMxNyA0LjExOTIzIDYuNDA2MjUgNC4wMDc4NyA2LjgwMTc2IDRDNy4xOTk3MSAzLjk5MTEyIDcuNTU1MTggNC4wODQ3MiA3Ljg2ODE3IDQuMjgwNzZDOC4xODQwOSA0LjQ3Nzg0IDguNDM1MDYgNC43NjIzNiA4LjYyMDYxIDUuMTM0MzRDOC44OTI1OCA1LjY3ODI4IDguOTc4NTIgNi4xNjI3MiA4Ljg3ODQyIDYuNTg3NTlDOC43ODEyNSA3LjAxMzQ2IDguNDk4MDUgNy4zNzQ3OSA4LjAyODgxIDcuNjcxNkw3LjUyMjQ2IDYuNjU3NjVDNy42NDY0OSA2LjU3MDg5IDcuNzQzMTcgNi40ODE5OSA3LjgxMjUgNi4zOTA5OUM3LjgzOTg1IDYuMzU1MTMgNy44NjI4IDYuMzE4OTQgNy44ODEzNSA2LjI4MjQxQzcuOTAxODYgNi4yNDI5NSA3LjkxNzQ4IDYuMjAzMDkgNy45Mjc3NCA2LjE2Mjg3QzcuOTcxNjggNS45OTA5NCA3LjkzODQ4IDUuNzk0OTggNy44Mjg2MiA1LjU3NDk4QzcuNzUgNS40MTc4OCA3LjY0MjU4IDUuMzAxODUgNy41MDU4NiA1LjIyNjg3QzcuNDcwNzEgNS4yMDc2MSA3LjQzMzYgNS4xOTEwNyA3LjM5NTAyIDUuMTc3MjVDNy4zMzEwNiA1LjE1NDQyIDcuMjYxMjMgNS4xMzg5OCA3LjE4NzAyIDUuMTMwODlDNi44OTExMiA1LjA5ODc5IDYuNTM0NjcgNS4xODU2NyA2LjExNzY4IDUuMzkxNDhMNS44NTM1MiA1LjUyMzM4QzUuNDE3NDggNS43NDExOCA1LjEyNjQ3IDUuOTc5MDMgNC45ODA0NyA2LjIzNjk0QzQuODk1NTEgNi4zOTEwMiA0Ljg2NDI2IDYuNTU1OTEgNC44ODYyMyA2LjczMTYzQzQuOTAxMzcgNi44NTExNyA0Ljk0MTQxIDYuOTc1NzEgNS4wMDU4NiA3LjEwNTI2QzUuMDIxOTggNy4xMzc3NiA1LjAzODU4IDcuMTY4ODUgNS4wNTUxOCA3LjE5ODU1TDUuMTAwMSA3LjI3MjM0QzUuMTMyMzMgNy4zMjE4NCA1LjE2NTUzIDcuMzY2NjcgNS4yMDAyIDcuNDA2ODNDNS4yOTAwNCA3LjUxMTY2IDUuMzg4MTkgNy41ODQ2NiA1LjQ5NDYzIDcuNjI1NzlMNi4xNzIzNyA3LjI4NzA4TDUuODA2NjQgNi41NTUxNUw2LjUyOTc5IDYuMTkzOTRMNy40MjEzOSA3Ljk3ODgyTDUuNjI3NDUgOC44NzUwNlpNOS4wOTgxNSAxMy40NzMzQzkuMDE3NTggMTMuNTA4OSA4LjkzNzUgMTMuNTM4OCA4Ljg1NzQzIDEzLjU2M0M4Ljc0NzA3IDEzLjU5NjMgOC42MzcyMSAxMy42MTg4IDguNTI3MzUgMTMuNjMwNUM4LjQwNzcyIDEzLjY0MzMgOC4yODgwOSAxMy42NDMyIDguMTY4NDYgMTMuNjMwNEM3Ljg2MTMzIDEzLjU5NjMgNy41NzYxOCAxMy40NzUzIDcuMzEyMDIgMTMuMjY3MkM3LjA0OTMyIDEzLjA2MTIgNi44MzEwNiAxMi43ODQyIDYuNjU3MjMgMTIuNDM2MkM2LjM3MDYxIDExLjg2MjIgNi4zMzE1NSAxMS4zMTY5IDYuNTQwNTMgMTAuOEM2Ljc1IDEwLjI4MzIgNy4xOTUzMiA5Ljg1NDQ2IDcuODc3NDUgOS41MTM3M0w4LjA5MzI3IDkuNDA1ODJDOC41MjE0OSA5LjE5MjAyIDguOTMyMTMgOS4wNzkxNiA5LjMyNjE4IDkuMDY3MjlDOS43MjMxNSA5LjA1NjQzIDEwLjA3ODYgOS4xNDc1MiAxMC4zOTIxIDkuMzQwNThDMTAuNDgxNCA5LjM5NDk2IDEwLjU2NTQgOS40NTYzOSAxMC42NDQ1IDkuNTI0ODdDMTAuNjk4NyA5LjU3MTU5IDEwLjc1IDkuNjIxNTggMTAuNzk4OCA5LjY3NDg3QzEwLjkzMTIgOS44MTkzNCAxMS4wNDU5IDkuOTg3OTIgMTEuMTQyMSAxMC4xODA2QzExLjQwNjcgMTAuNzEwNiAxMS40Nzk1IDExLjIwNjUgMTEuMzYwNCAxMS42Njg0QzExLjI0MzIgMTIuMTI5MiAxMC45NTA3IDEyLjUwNDEgMTAuNDgyOSAxMi43OTI4TDkuOTU4MDEgMTEuNzQyOUMxMC4yMjAyIDExLjYwMiAxMC4zNzc0IDExLjQzOTYgMTAuNDMwNyAxMS4yNTU3QzEwLjQ4MzkgMTEuMDcxNyAxMC40NDU4IDEwLjg1MDggMTAuMzE2OSAxMC41OTI4QzEwLjE4NiAxMC4zMzA4IDkuOTkyMTkgMTAuMTg3OCA5LjczNTM2IDEwLjE2MzdDOS40NzgwMyAxMC4xMzk2IDkuMTMzMyAxMC4yMzIgOC43MDAyIDEwLjQ0MDhMOC4zOTExMiAxMC41OTUyQzguMTkyMzkgMTAuNjk0NCA4LjAyMzQ0IDEwLjc5MjEgNy44ODM3OSAxMC44ODgyQzcuNzg3NiAxMC45NTQ0IDcuNzA1NTcgMTEuMDE5OCA3LjYzNzcgMTEuMDg0NUM3LjU3MjI3IDExLjE0NjQgNy41MTk1NCAxMS4yMDc3IDcuNDc5NSAxMS4yNjgyQzcuMzM4MzggMTEuNDg2MSA3LjMzOTM2IDExLjczODEgNy40ODE5NCAxMi4wMjQxQzcuNTQwNTMgMTIuMTQxMyA3LjYwNTk2IDEyLjIzODUgNy42Nzc3NCAxMi4zMTU2QzcuNzU0NCAxMi4zOTc3IDcuODM4MzggMTIuNDU3IDcuOTMwMTggMTIuNDkzNkM4LjEwODQgMTIuNTY0NiA4LjMyMzI1IDEyLjU0MjIgOC41NzUyIDEyLjQyNjNMOS4wOTgxNSAxMy40NzMzWk0xMC44OTI2IDE2Ljk1OTdDMTAuODYxMyAxNy4xMTI2IDEwLjc2OSAxNy4yMjc2IDEwLjYxNTIgMTcuMzA0NUMxMC40NzkgMTcuMzcyNSAxMC4zNDc3IDE3LjM3NDQgMTAuMjIwNyAxNy4zMTA0QzEwLjA5NjcgMTcuMjQ3MyA5Ljk5MTIxIDE3LjEyODggOS45MDQzIDE2Ljk1NDlDOS43Njg1NiAxNi42ODI5IDkuNzI1MSAxNi40NTg0IDkuNzczOTMgMTYuMjgxNUM5LjgyNjE4IDE2LjEwNTUgOS45NjkyNCAxNS45NTkxIDEwLjIwMzEgMTUuODQyMkw5LjY3NTc5IDE0Ljc4NjNDOS4zODc3IDE0LjkzMDEgOS4xNjg0NiAxNS4xMjk1IDkuMDE4NTYgMTUuMzg0NEM4Ljg3MTU5IDE1LjY0MDMgOC44MDUxOCAxNS45NDMyIDguODIwMzIgMTYuMjkzMkM4LjgzODM4IDE2LjY0NDEgOC45MzU1NSAxNi45OTY2IDkuMTEyMzEgMTcuMzUwNUM5LjM2MzI5IDE3Ljg1MjUgOS42Njk0NCAxOC4xOTMgMTAuMDMxMyAxOC4zNzIxQzEwLjM5MzEgMTguNTUxMiAxMC43NjUxIDE4LjU0NTMgMTEuMTQ3IDE4LjM1NDVDMTEuNjI1IDE4LjExNTcgMTEuODgyMyAxNy42OTIzIDExLjkxODUgMTcuMDg0NUMxMS45MjgyIDE2LjkyMzEgMTEuOTIzMyAxNi43NDA5IDExLjkwMzggMTYuNTM3OEMxMS44OTMxIDE2LjQyNjQgMTEuODc3OSAxNi4zMDg3IDExLjg1ODQgMTYuMTg0NkMxMS44MDU3IDE1LjgzMzcgMTEuNzk0NCAxNS41NzU3IDExLjgyNDIgMTUuNDEwOEMxMS44NTY0IDE1LjI0NDggMTEuOTI4MiAxNS4xMzM5IDEyLjA0MDUgMTUuMDc3OUMxMi4xNjg1IDE1LjAxNCAxMi4zMDAzIDE1LjAxNTUgMTIuNDM2NSAxNS4wODI2QzEyLjU3NTIgMTUuMTUwNiAxMi42OTE5IDE1LjI3ODYgMTIuNzg1NiAxNS40NjY2QzEyLjg3ODQgMTUuNjUyNiAxMi45MDI4IDE1LjgyNDEgMTIuODU4OSAxNS45ODFDMTIuODE1OSAxNi4xNCAxMi43MDU2IDE2LjI2MzkgMTIuNTI3MyAxNi4zNTI4TDEzLjA1MTggMTcuNDAyOEMxMy4zMTc5IDE3LjI2OTkgMTMuNTE5NSAxNy4wODMgMTMuNjU2NyAxNi44NDIxQzEzLjczNTQgMTYuNzA0NyAxMy43OSAxNi41NTY5IDEzLjgxOTggMTYuMzk4OUMxMy44NDI4IDE2LjI3ODcgMTMuODUxNiAxNi4xNTI1IDEzLjg0NTcgMTYuMDIwM0MxMy44MzQgMTUuNzE2NCAxMy43NDk1IDE1LjQwNzQgMTMuNTkyOCAxNS4wOTM0QzEzLjUwNzggMTQuOTIzNiAxMy40MTI2IDE0Ljc2OTkgMTMuMzA3NiAxNC42MzI0QzEzLjIxMzkgMTQuNTA5MSAxMy4xMTE4IDE0LjM5ODggMTMuMDAyIDE0LjMwMTRDMTIuNzcxIDE0LjA5NDQgMTIuNTI3MyAxMy45NjYzIDEyLjI3IDEzLjkxNzNDMTIuMDE2MSAxMy44NjkyIDExLjc2ODYgMTMuOTA1NiAxMS41MjY0IDE0LjAyNjVDMTEuMDQwNSAxNC4yNjkzIDEwLjc5OTggMTQuNzQzMSAxMC44MDQ3IDE1LjQ0OEMxMC44MDU3IDE1LjY2NDkgMTAuODI4NiAxNS45MzM0IDEwLjg3MzUgMTYuMjUzM0MxMC44OTQ1IDE2LjQwMzkgMTAuOTA3MiAxNi41MzU3IDEwLjkxMTEgMTYuNjQ4OEMxMC45MTYgMTYuNzc2MSAxMC45MDk3IDE2Ljg3OTggMTAuODkyNiAxNi45NTk3WiIgZmlsbD0iIzIyNzZFNCIvPgo8L3N2Zz4K"
+    }
+  },
+  "configuration-groups": [
+    {
+      "label": "Reference",
+      "properties": [
+        {
+          "label": "Reference Name",
+          "widget-type": "textbox",
+          "name": "referenceName",
+          "widget-attributes": {
+            "placeholder": "Name used to identify this source for lineage",
+            "default": ""
+          }
+        }
+      ]
+    },
+    {
+      "label": "GCS origin path",
+      "properties": [
+        {
+          "label": "GCS Path",
+          "widget-type": "textbox",
+          "name": "gcsPath",
+          "widget-attributes": {
+            "default": "",
+            "placeholder": "gs://<bucket>/path/to/read"
+          }
+        },
+        {
+          "label": "Regex Path Filter ",
+          "name": "regexFilter",
+          "widget-type": "textbox",
+          "widget-attributes": {
+            "default": "",
+            "placeholder": "Regex Path Filter. For Example: .*.parquet 'https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#sum'"
+          }
+        },
+        {
+          "widget-type": "radio-group",
+          "label": "Recursive",
+          "name": "recursive",
+          "widget-attributes": {
+            "placeholder": "Recursive read",
+            "layout": "inline",
+            "default": "no",
+            "options": [
+              {
+                "id": "no",
+                "label": "No"
+              },
+              {
+                "id": "yes",
+                "label": "Yes"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Delta",
+      "properties": [
+        {
+          "widget-type": "textbox",
+          "label": "Last date processed File",
+          "name": "persistDelta",
+          "widget-attributes": {
+            "default": "",
+            "placeholder": "The last modification time file to persist"
+          }
+        },
+        {
+          "widget-type": "textbox",
+          "label": "Last date processed",
+          "name": "fromDelta",
+          "widget-attributes": {
+            "placeholder": "The last modification time. They are represented as seconds from Jan 1, 1970 in UTC"
+          }
+        }
+      ]
+    },
+    {
+      "label" : "Credentials",
+      "properties" : [
+        {
+          "name": "serviceAccountType",
+          "label": "Service Account Type",
+          "widget-type": "radio-group",
+          "widget-attributes": {
+            "layout": "inline",
+            "default": "filePath",
+            "options": [
+              {
+                "id": "filePath",
+                "label": "File Path"
+              },
+              {
+                "id": "json",
+                "label": "JSON"
+              }
+            ]
+          }
+        },
+        {
+          "widget-type": "textbox",
+          "label": "Service Account JSON",
+          "name": "serviceAccountJSON"
+        },
+        {
+          "widget-type": "textbox",
+          "label": "Service Account File Path",
+          "name": "serviceFilePath",
+          "widget-attributes": {
+            "default": "auto-detect"
+          }
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "widget-type": "non-editable-schema-editor",
+      "schema": {
+        "name": "etlSchemaBody",
+        "type": "record",
+        "fields": [
+          {
+            "name": "connectionType",
+            "type": "string"
+          },
+          {
+            "name": "connection",
+            "type": "string"
+          },
+          {
+            "name": "fullfilename",
+            "type": "string"
+          },
+          {
+            "name": "filename",
+            "type": "string"
+          },
+          {
+            "name": "basename",
+            "type": "string"
+          },
+          {
+            "name": "size",
+            "type": "long"
+          },
+          {
+            "name": "mtime",
+            "type": "int"
+          }
+        ]
+      }
+    }
+  ],
+  "filters": [
+    {
+      "name": "ServiceAuthenticationTypeFilePath",
+      "condition": {
+        "expression": "serviceAccountType == 'filePath'"
+      },
+      "show":[
+        {
+          "type": "property",
+          "name": "serviceFilePath"
+        }
+      ]
+    },
+    {
+      "name": "ServiceAuthenticationTypeJSON",
+      "condition": {
+        "expression": "serviceAccountType == 'json'"
+      },
+      "show":[
+        {
+          "type": "property",
+          "name": "serviceAccountJSON"
+        }
+      ]
+    }
+  ],
+
+  "jump-config": {
+    "datasets": [
+      {
+        "ref-property-name": "referenceName"
+      }
+    ]
+  }
+
+}

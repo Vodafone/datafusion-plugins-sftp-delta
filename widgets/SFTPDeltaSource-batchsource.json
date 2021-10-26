@@ -52,6 +52,26 @@
           }
         },
         {
+          "widget-type": "radio-group",
+          "label": "Recursive",
+          "name": "recursive",
+          "widget-attributes": {
+            "placeholder": "Recursive read",
+            "layout": "inline",
+            "default": "no",
+            "options": [
+              {
+                "id": "no",
+                "label": "No"
+              },
+              {
+                "id": "yes",
+                "label": "Yes"
+              }
+            ]
+          }
+        },
+        {
           "label": "Regex Path Filter ",
           "name": "regexFilter",
           "widget-type": "textbox",
@@ -73,14 +93,14 @@
           "widget-type": "radio-group",
           "widget-attributes": {
             "layout": "inline",
-            "default": "privatekey-select",
+            "default": "privatekey",
             "options": [
               {
-                "id": "privatekey-select",
+                "id": "privatekey",
                 "label": "PrivateKey"
               },
               {
-                "id": "password-select",
+                "id": "password",
                 "label": "Password"
               }
             ]
@@ -122,6 +142,21 @@
           "widget-attributes": {
             "placeholder": "The last modification time. They are represented as seconds from Jan 1, 1970 in UTC"
           }
+        }
+      ]
+    },
+    {
+      "label": "Proxy",
+      "properties": [
+        {
+          "widget-type": "textbox",
+          "label": "Proxy IP",
+          "name": "proxyIP"
+        },
+        {
+          "widget-type": "textbox",
+          "label": "Proxy Port",
+          "name": "proxyPort"
         }
       ]
     },
@@ -217,7 +252,7 @@
     {
       "name": "AuthByPrivateKey",
       "condition": {
-        "expression": "authentication == 'privatekey-select'"
+        "expression": "authentication == 'privatekey'"
       },
       "show":[
         {
@@ -233,7 +268,7 @@
     {
       "name": "AuthByPassword",
       "condition": {
-        "expression": "authentication == 'password-select'"
+        "expression": "authentication == 'password'"
       },
       "show":
       [

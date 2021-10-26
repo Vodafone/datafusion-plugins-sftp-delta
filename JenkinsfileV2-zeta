@@ -1,0 +1,81 @@
+podTemplate(cloud: 'kubernetes', containers: [
+  containerTemplate(
+      name: 'mvn', 
+      image: "eu.gcr.io/${SS_PROJECT}/neuron-gcloud-jdk8-mvn3:v1.0.0",
+      ttyEnabled: true,
+      command: 'cat',
+      workingDir: '/home/jenkins/agent',
+      resourceRequestCpu: '250m',
+      resourceLimitCpu: '500m',
+      resourceRequestMemory: '1000Mi',
+      resourceLimitMemory: '3000Mi',
+      )
+  ],
+  annotations: [
+    podAnnotation(key: "cluster-autoscaler.kubernetes.io/safe-to-evict", value: "false")
+]) {
+
+node(POD_LABEL) {
+    stage('Git') {
+      container('mvn') {
+        checkout scm
+      }
+    }
+    stage('MVN Package/Deploy') {
+      container('mvn') {
+          configFileProvider([configFile(fileId: 'neuron-global-maven-settings', variable: 'MAVEN_SETTINGS_XML')]) {  
+          pom = readMavenPom file: 'pom.xml'
+          env.POM_VERSION = pom.version
+          env.ARTIFACT_ID = pom.artifactId
+          env.GROUPID = pom.groupId
+          try{
+            println env.BRANCH_NAME
+          }catch(Exception e){
+            println "no hay nombre rama"
+          }
+          if(env.BRANCH_NAME != 'master'){
+            env.NEXUS_URL="http://nexus.neuron.shared-services.vf.local/nexus/repository/maven-snapshots/"
+          }else{
+            env.NEXUS_URL="http://nexus.neuron.shared-services.vf.local/nexus/repository/maven-releases/"
+          }
+          sh ''' #!/bin/bash -e
+
+          
+
+
+
+echo "POM_VERSION: "${POM_VERSION}
+echo "ARTIFACT_ID: "${ARTIFACT_ID}
+echo "GROUPID: "${GROUPID}
+echo "NEXUS_URL: "${NESUS_URL}
+
+mvn -s $MAVEN_SETTINGS_XML clean package -DskipTests
+
+mkdir -p ./target/${ARTIFACT_ID}-${POM_VERSION}
+tar -czvf ./target/${ARTIFACT_ID}-${POM_VERSION}.tar.gz ./target/${ARTIFACT_ID}-${POM_VERSION}.json ./target/${ARTIFACT_ID}-${POM_VERSION}.jar
+
+mvn -s $MAVEN_SETTINGS_XML deploy:deploy-file \
+-Dmaven.wagon.http.ssl.insecure=true \
+-Dmaven.wagon.http.ssl.allowall=true \
+-Dmaven.wagon.http.ssl.ignore.validity.dates=true \
+-DgroupId=${GROUPID} \
+-DartifactId=${ARTIFACT_ID} \
+-Dversion=${POM_VERSION} \
+-DrepositoryId=cloud_nexus \
+-Dpackaging=tar.gz \
+-Dfile=${WORKSPACE}/target/${ARTIFACT_ID}-${POM_VERSION}.tar.gz \
+-DgeneratePom=true \
+-DupdateReleaseInfo=true \
+-Durl=${NEXUS_URL} \
+-DskipTests \
+--batch-mode \
+--no-transfer-progress \
+--errors
+
+
+'''
+        }
+      }
+    } 
+  } 
+}
