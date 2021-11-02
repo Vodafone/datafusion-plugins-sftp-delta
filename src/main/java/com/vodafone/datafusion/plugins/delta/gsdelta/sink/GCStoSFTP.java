@@ -113,7 +113,6 @@ public class GCStoSFTP extends BatchSink<StructuredRecord, Void, Void> {
         try {
             SFTPConnectorConfig connConfig = new SFTPConnectorConfig(config.sftpServer, config.sftpPort, config.sftpPath,
                     config.sftpUser, config.sftpPass, config.proxyIP, config.proxyPort, config.authType, config.privateKey, config.passphrase, config.sshProperties);
-
             sftpConnector = DeltaUtils.getSftpConnector(connConfig);
             sftpChannel = sftpConnector.getSftpChannel();
         } catch (Exception ex) {

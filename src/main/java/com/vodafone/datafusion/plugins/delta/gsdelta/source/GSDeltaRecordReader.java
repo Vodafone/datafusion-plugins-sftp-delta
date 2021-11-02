@@ -172,7 +172,7 @@ public class GSDeltaRecordReader extends RecordReader<NullWritable, GSDeltaRecor
         } else {
             prefix = gcsPath.getName();
         }
-        if(recursive.equals(YES)){
+        if(Boolean.parseBoolean(recursive)){
             blobs = storage.list(
                     gcsPath.getBucket(),
                     Storage.BlobListOption.prefix(prefix));

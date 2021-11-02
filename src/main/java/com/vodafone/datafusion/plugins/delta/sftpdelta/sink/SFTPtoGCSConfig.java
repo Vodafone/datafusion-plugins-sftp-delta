@@ -118,7 +118,7 @@ public class SFTPtoGCSConfig extends PluginConfig {
      */
     public void validate(FailureCollector collector) {
         try {
-           if(!Strings.isNullOrEmpty(path) && !path.startsWith(MACRO)) {
+           if(Strings.isNullOrEmpty(path) && !path.startsWith(MACRO)) {
                GCSPath.from(path);
            }
         } catch (Exception e) {

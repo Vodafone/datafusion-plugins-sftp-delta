@@ -44,7 +44,7 @@
           }
         },
         {
-          "label": "Path ",
+          "label": "Path",
           "name": "sftpPath",
           "widget-type": "textbox",
           "widget-attributes": {
@@ -89,6 +89,7 @@
           }
         },
         {
+          "label": "Authentication",
           "name": "authentication",
           "widget-type": "radio-group",
           "widget-attributes": {
@@ -128,7 +129,7 @@
       "properties": [
         {
           "widget-type": "textbox",
-          "label": "Last date processed File",
+          "label": "Last Date Processed File",
           "name": "persistDelta",
           "widget-attributes": {
             "default": "",
@@ -137,7 +138,7 @@
         },
         {
           "widget-type": "textbox",
-          "label": "Last date processed",
+          "label": "Last Date Processed",
           "name": "fromDelta",
           "widget-attributes": {
             "placeholder": "The last modification time. They are represented as seconds from Jan 1, 1970 in UTC"

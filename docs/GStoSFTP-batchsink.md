@@ -6,16 +6,18 @@ GCStoSFTP allows writing into a SFTP server the list of files read from GCS.
 
 Usage Notes
 -----------
-In order perform GCStoSFTP, we require host and port on which the SFTP server is running. SFTP implements secure file
+This plugin is intended to be used in conjunction with GCSDelta Source plugin.
+The use of `Repartition` between GSDelta and GCStoSFTP plugins, will help in terms of parallelization.
+
+In order for the GCStoSFTP plugin to work correctly, we require host and port on which the SFTP server is running. SFTP implements secure file
 transfer over SSH. Typically port number 22 is used for SFTP(which is also default port for SSH). We also require valid
 credentials in the form of user name and password. Please make sure that you are able to SSH to the SFTP server using
 specified user and password. SSH connection to SFTP server can be customized by providing additional configurations
 such as enable host key checking by setting configuration property 'StrictHostKeyChecking' to 'yes'. These additional
 configurations can be specified using `Properties for SSH` section.
 
-Directory on the SFTP server which files will be stored can be specified using `Target Path` property. The specified
-directory should exist and absolute path to the directory must be provided. If directory is empty then execution will
-continue without any error. if directory doesn't exist then execution will throw an Exception.
+Directory on the SFTP server where files will be stored can be specified using `Target Path` property. The specified
+directory should exist and absolute path to the directory must be provided. 
 
 
 Plugin Configuration
@@ -24,14 +26,16 @@ Plugin Configuration
 | Configuration | Required | Default | Description |
 | :------------ | :------: | :----- | :---------- |
 | **Reference Name** | **N** | N/A | Name used to uniquely identify this sink for lineage, annotating metadata, etc.. |
-| **Host** | **Y** | N/A | Specifies the host name of the SFTP server.|
-| **Port** | **Y** | 22 | Numeric value that Specifies the port on which SFTP server is running.|
-| **Target Path** | **Y** | N/A | Absolute path of the directory on the SFTP server which is to be listed. If the directory is empty, the execution of the plugin will be no-op.|
+| **Host** | **Y** | N/A | SFTP server host name.|
+| **Port** | **Y** | 22 | Numeric value that Specifies the port where SFTP server is running.|
+| **Target Path** | **Y** | N/A | Absolute path where files will be stored. |
 | **Username** | **Y** | N/A | Specifies the name of the user which will be used to connect to the SFTP server.|
 | **Authentication** | **Y** | **PrivateKey** | Specifies the type of Authentication that will be used to connect to the SFTP Server.|
 | **Private Key**| **N** | N/A | Private RSA Key to be used to connect to the SFTP Server. This key is recommended to be stored in the Secure Key Store, and macro called into the Configuration. Must be a RSA key starting with -----BEGIN RSA PRIVATE KEY-----|
-| **Private Key Passphrase** | **N** | N/A | Passphrase to be used with RSA Private Key if a Passphrase was specified when key was generated.|
+| **PrivateKey Passphrase** | **N** | N/A | Passphrase to be used with RSA Private Key if a Passphrase was specified when key was generated.|
 | **Password** | **N** | N/A | Specifies the password of the user. Only Required if Private Key is not being used.|
+| **Proxy** | **N** | N/A | Proxy url if needed.|
+| **Proxy Port** | **N** | N/A | Proxy port if needed.|
 | **Num. retries** | **N** | 3 | Number of retries in case of upload fail.|
 | **Time to wait** | **N** | 30 | Time between retries in seconds.|
 | **Archive Original Files** | **Y** | No | Specifies if archive/delete original sftp is required.|
@@ -46,7 +50,7 @@ To build this plugin:
    mvn clean package
 ```
 
-The build will create a .jar and .json file under the ``target`` directory.
+The build will create a .jar and .json file under the `target` directory.
 These files can be used to deploy your plugins.
 
 Deployment

@@ -18,16 +18,16 @@
           "widget-type": "textbox",
           "name": "referenceName",
           "widget-attributes": {
-            "placeholder": "Name used to identify this source for lineage"
+            "placeholder": "Name used to identify this source for lineage."
           }
         }
         ]
     },
     {
-      "label": "SFTP to GCS sink",
+      "label": "SFTP to GCS",
       "properties": [
         {
-          "label": "Path ",
+          "label": "Path",
           "widget-type": "textbox",
           "name": "path",
           "widget-attributes": {

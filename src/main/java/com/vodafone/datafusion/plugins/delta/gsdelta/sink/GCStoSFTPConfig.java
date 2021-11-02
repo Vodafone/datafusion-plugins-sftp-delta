@@ -140,7 +140,6 @@ public class GCStoSFTPConfig extends PluginConfig {
      * @param proxyPort
      * @param privateKeyPath
      * @param privateKeyPassword
-
      */
     public GCStoSFTPConfig(
             String referenceName,

@@ -52,14 +52,14 @@
           "widget-attributes": {
             "placeholder": "Recursive read",
             "layout": "inline",
-            "default": "no",
+            "default": "false",
             "options": [
               {
-                "id": "no",
+                "id": "false",
                 "label": "No"
               },
               {
-                "id": "yes",
+                "id": "true",
                 "label": "Yes"
               }
             ]
